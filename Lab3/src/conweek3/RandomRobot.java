@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  */
 public class RandomRobot implements Runnable {
 
-    int map[][] = new int[8][8];
+    int map[][];
     int x = 0;
     int y = 0;
     int choice;

@@ -31,9 +31,8 @@ public class EvaluateMinimum implements Runnable {
             }
             modify();
         }
-        synchronized (minList) {
-            minList.add(min);
-        }
+        minList.add(min);
+
         System.out.printf("%.2f", min);
         System.out.println();
     }

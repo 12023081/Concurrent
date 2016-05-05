@@ -5,7 +5,6 @@
  */
 package conweek5;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -27,6 +26,7 @@ public class ConWeek5 {
         long end;
         Random rand = new Random();
         double r;
+        double min = 100000.00;
 
         start = System.currentTimeMillis();
 
@@ -60,8 +60,13 @@ public class ConWeek5 {
             }
         }
 
+        for (int i = 0; i < minList.size(); i++) {
+            if ((double) minList.get(i) < min) {
+                min = (double) minList.get(i);
+            }
+        }
         end = System.currentTimeMillis();
         System.out.println("Time needed to run program: " + (end - start) + "ms");
-        System.out.printf("Minimum of all Threads: %.2f", (double) minList.get(minList.indexOf(Collections.min(minList))));
+        System.out.printf("Minimum of all Threads: %.2f", min);
     }
 }
